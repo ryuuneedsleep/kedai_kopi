@@ -1,20 +1,16 @@
+### Kopi Bintang
 
-# Kopi Senja
+### https://ryuuneedsleep.github.io/kedai_kopi/index.html
 
-Website sederhana kedai kopi yang dibuat menggunakan HTML5.
+### 1. Sebutkan satu bagian yang kamu susun dengan Flexbox dan satu bagian dengan Grid. Mengapa pilihan itu cocok untuk kedua bagian tersebut?
 
-## Jawaban Praktikum
+Saya menggunakan Flexbox pada bagian header untuk mengatur posisi nama kedai dan navigasi. Flexbox digunakan karena bisa mengatur posisi elemen secara horizontal dan juga vertikal. Jadi, pada layar desktop nama kedai berada di sebelah kiri dan navigasi di sebelah kanan sedangkan di layar smartphone dan tablet tersusun ke bawah.
 
-### 1. Apa yang muncul di address bar setelah form dikirim, dan mengapa data form tampil di sana?
+Saya menggunakan Grid pada bagian daftar menu untuk mengatur card setiap menu. Grid digunakan untuk membagi card menjadi beberapa kolom sesuai ukuran layar. Pada ponsel menggunakan satu kolom, tablet dua kolom, dan desktop menjadi tiga kolom.
 
-Setelah formulir dikirim, data yang sudah dimasukkan akan muncul pada address bar dalam bentuk parameter URL. Hal ini terjadi karena formulir menggunakan method GET.
+### 2. Ceritakan satu aturan CSS yang awalnya tidak berlaku. Apa yang kamu lihat di panel Styles, dan bagaimana kamu memperbaikinya?
 
-Method GET mengirimkan data melalui URL dengan menambahkan tanda tanya dan nama serta nilai dari setiap input. Pada percobaan saya yang muncul adalah "file:///D:/Coolyeah/Bootcamp/KedaiKopi/pesan.html?nama=Bintang&whatsapp=08811205636&menu=Chocolate+Milk&jumlah=2&cara_ambil=Ambil+di+tempat&catatan=Aku+yang+ganteng+ka"
+Saya mengira bahwa box-sizing: border-box; tidak berfungsi. Awalnya saya pikir fungsinya adalah membuat box dan border secara otomatis. Saya juga sempat berpikir bahwa aturan tersebut harus menggunakan class box terlebih dahulu agar bisa berfungsi.
 
-Hal ini sesuai dengan materi HTTP pada Minggu 1, yaitu GET digunakan untuk meminta atau mengambil data melalui URL. Oleh karena itu, data formulir dapat terlihat pada address bar.
+Ternyata hanya perlu diterapkan pada elemen yang sesuai dengan selectornya. Untuk memperbaikinya, saya memindahkan aturan tersebut ke selector universal menggunakan * { box-sizing: border-box; }. Jadi, aturan tersebut dapat diterapkan ke seluruh elemen HTML tanpa harus menambahkan class satu per satu.
 
-### 2. Pilih satu bagian halaman yang memakai element semantic. Mengapa memilih element tersebut dan bukan div?
-
-Saya menggunakan element <main> untuk membungkus konten utama pada setiap halaman. Saya memilih element tersebut karena <main> secara khusus menunjukkan bagian utama dari sebuah halaman website.
-
-Berbeda dengan <div> yang hanya berfungsi sebagai pembungkus umum tanpa makna khusus, <main> memiliki makna semantik sehingga membantu browser, mesin pencari, dan teknologi pembaca layar memahami struktur halaman dengan lebih baik.
